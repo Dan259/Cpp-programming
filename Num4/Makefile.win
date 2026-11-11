@@ -6,9 +6,9 @@ CC       = gcc.exe
 WINDRES  = windres.exe
 OBJ      = main.o Figure.o Triangle.o Rectangle.o
 LINKOBJ  = main.o Figure.o Triangle.o Rectangle.o
-LIBS     = -L"C:/Users/da7lt/OneDrive/Рабочий стол/Dev-Cpp/MinGW64/lib" -L"C:/Users/da7lt/OneDrive/Рабочий стол/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
-INCS     = -I"C:/Users/da7lt/OneDrive/Рабочий стол/Dev-Cpp/MinGW64/include" -I"C:/Users/da7lt/OneDrive/Рабочий стол/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/da7lt/OneDrive/Рабочий стол/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
-CXXINCS  = -I"C:/Users/da7lt/OneDrive/Рабочий стол/Dev-Cpp/MinGW64/include" -I"C:/Users/da7lt/OneDrive/Рабочий стол/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/da7lt/OneDrive/Рабочий стол/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/da7lt/OneDrive/Рабочий стол/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+LIBS     = -L"C:/Proga/Dev-Cpp/MinGW64/lib" -L"C:/Proga/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Proga/Dev-Cpp/MinGW64/include" -I"C:/Proga/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Proga/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Proga/Dev-Cpp/MinGW64/include" -I"C:/Proga/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Proga/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Proga/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
 BIN      = Num4.exe
 CXXFLAGS = $(CXXINCS) -std=c++11
 CFLAGS   = $(INCS) -std=c++11
