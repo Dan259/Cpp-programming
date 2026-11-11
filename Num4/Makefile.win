@@ -1,0 +1,37 @@
+# Project: Num4
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o Figure.o Triangle.o Rectangle.o
+LINKOBJ  = main.o Figure.o Triangle.o Rectangle.o
+LIBS     = -L"C:/Users/da7lt/OneDrive/Рабочий стол/Dev-Cpp/MinGW64/lib" -L"C:/Users/da7lt/OneDrive/Рабочий стол/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Users/da7lt/OneDrive/Рабочий стол/Dev-Cpp/MinGW64/include" -I"C:/Users/da7lt/OneDrive/Рабочий стол/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/da7lt/OneDrive/Рабочий стол/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Users/da7lt/OneDrive/Рабочий стол/Dev-Cpp/MinGW64/include" -I"C:/Users/da7lt/OneDrive/Рабочий стол/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/da7lt/OneDrive/Рабочий стол/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/da7lt/OneDrive/Рабочий стол/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Num4.exe
+CXXFLAGS = $(CXXINCS) -std=c++11
+CFLAGS   = $(INCS) -std=c++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Figure.o: Figure.cpp
+	$(CPP) -c Figure.cpp -o Figure.o $(CXXFLAGS)
+
+Triangle.o: Triangle.cpp
+	$(CPP) -c Triangle.cpp -o Triangle.o $(CXXFLAGS)
+
+Rectangle.o: Rectangle.cpp
+	$(CPP) -c Rectangle.cpp -o Rectangle.o $(CXXFLAGS)
